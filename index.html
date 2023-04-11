@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Farm</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="logo.png" class="profile-picture">
+            <h3 id="user-name">@User</h3>
+            <button id="change-user">Mudar usuário</button>
+            <button id="add-streamer">Adicionar streamer</button>
+        </div>
+        <div class="live-container"></div>
+        <div class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Logar</h2>
+              <form>
+                <label for="twitch-user">Twitch User:</label>
+                <input type="text" id="twitch-user" name="twitch-user" required>
+          
+                <label for="oauth-token">Access Token:</label>
+                <input type="password" id="oauth-token" name="oauth-token" required>
+
+                <label for="client-id">Client Id:</label>
+                <input type="password" id="client-id" name="oauth-token" required>
+          
+                <button id="user-save-btn">Logar</button>
+              </form>
+            </div>
+        </div>
+        <div class="modal add-streamer-modal" style="display:none;">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Add Streamer</h2>
+              <form>
+                <label for="streamer-name">Streamer twitch link:</label>
+                <input type="text" id="streamer-name" placeholder="Ex: https://www.twitch.tv/gaules" name="streamer-name" required>
+          
+                <button id="streamer-save-btn">Add Streamer</button>
+              </form>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
